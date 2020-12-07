@@ -5,4 +5,3 @@ magic = [{"name":"Fire", "cost":10, "dmg":60},
         {"name":"Blizzard", "cost":10, "dmg":60}]
 
 player = Person(460, 65, 60, 34, magic)
-print(player)
