@@ -37,7 +37,7 @@ class Person:
         self.hp += dmg
         if self.hp > self.maxhp:
             self.hp = self.maxhp
-    
+
     def get_hp(self):
         return self.hp
 
@@ -49,20 +49,21 @@ class Person:
 
     def get_max_mp(self):
         return self.maxmp
-    
+
     def reduce_mp(self, cost):
         self.mp -= cost
 
-
     def choose_action(self):
         i = 1
-        print("\n" + bcolors.OKBLUE + bcolors.BOLD + "ACTIONS:" + bcolors.ENDC)
+        print("\n" + "    " + bcolors.BOLD + self.name + bcolors.ENDC)
+        print(bcolors.OKBLUE + bcolors.BOLD + "    ACTIONS:" + bcolors.ENDC)
         for item in self.actions:
             print("        " + str(i) + ".", item)
             i += 1
 
     def choose_magic(self):
         i = 1
+
         print("\n" + bcolors.OKBLUE + bcolors.BOLD + "    MAGIC:" + bcolors.ENDC)
         for spell in self.magic:
             print("        " + str(i) + ".", spell.name, "(cost:", str(spell.cost) + ")")
