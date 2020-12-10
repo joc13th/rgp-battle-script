@@ -5,23 +5,23 @@ import random
 
 
 # Create Black Magic
-fire = Spell("Fire", 25, 600, "black")
-thunder = Spell("Thunder", 25, 600, "black")
-blizzard = Spell("Blizzard", 25, 600, "black")
-meteor = Spell("Meteor", 40, 1200, "black")
-quake = Spell("Quake", 14, 140, "black")
+fire = Spell("Fire", 25, 6000, "black")
+thunder = Spell("Thunder", 25, 6000, "black")
+blizzard = Spell("Blizzard", 25, 6000, "black")
+meteor = Spell("Meteor", 40, 12000, "black")
+quake = Spell("Quake", 14, 1400, "black")
 
 # Create White Magic
-cure = Spell("Cure", 25, 620, "white")
-cura = Spell("Cura", 32, 1500, "white")
-curaga = Spell("Curaga", 50, 6000, "white")
+cure = Spell("Cure", 25, 6200, "white")
+cura = Spell("Cura", 32, 15000, "white")
+curaga = Spell("Curaga", 50, 60000, "white")
 
 # Create some Items
-potion = Item("Potion", "potion", "Heals 50 HP", 50)
-hipotion = Item("Hi-Potion", "potion", "Heals 100 HP", 100)
-superpotion = Item("Super Potion", "potion", "Heals 1000 HP", 1000)
-elixer = Item("Elixer", "elixer", "Fully restores HP/MP of one party member", 9999)
-hielixer = Item("MegaElixer", "elixer", "Fully restores party's HP/MP", 9999)
+potion = Item("Potion", "potion", "Heals 50 HP", 500)
+hipotion = Item("Hi-Potion", "potion", "Heals 100 HP", 1000)
+superpotion = Item("Super Potion", "potion", "Heals 1000 HP", 10000)
+elixer = Item("Elixer", "elixer", "Fully restores HP/MP of one party member", 99999)
+hielixer = Item("MegaElixer", "elixer", "Fully restores party's HP/MP", 99999)
 
 grenade = Item("Grenade", "attack", "Deals 500 damage", 500)
 
@@ -32,13 +32,13 @@ player_items = [{"item": potion, "quantity": 15}, {"item": hipotion, "quantity":
                 {"item": hielixer, "quantity": 2}, {"item": grenade, "quantity": 5}]
 
 # Instantiate People
-player1 = Person("Cloud:", 32060, 132, 300, 34, player_spells, player_items)
-player2 = Person("Tifa :", 41060, 188, 311, 34, player_spells, player_items)
-player3 = Person("Barret:", 30089, 174, 288, 34, player_spells, player_items)
+player1 = Person("Cloud:", 32060, 132, 3000, 34, player_spells, player_items)
+player2 = Person("Tifa :", 41060, 188, 3101, 34, player_spells, player_items)
+player3 = Person("Barret:", 30089, 174, 2808, 34, player_spells, player_items)
 
-enemy1 = Person("Ifrit  ", 10250, 130, 560, 325, enemy_spells, [])
-enemy2 = Person("Sephirot", 180200, 701, 525, 25, enemy_spells, [])
-enemy3 = Person("Leviathan  ", 10250, 130, 560, 325, enemy_spells, [])
+enemy1 = Person("Ifrit  ", 10250, 130, 5600, 325, enemy_spells, [])
+enemy2 = Person("Sephirot", 180200, 701, 5250, 25, enemy_spells, [])
+enemy3 = Person("Leviathan  ", 10250, 130, 5600, 325, enemy_spells, [])
 
 players = [player1, player2, player3]
 enemies = [enemy1, enemy2, enemy3]
