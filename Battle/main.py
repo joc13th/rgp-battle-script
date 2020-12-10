@@ -37,7 +37,7 @@ player2 = Person("Tifa:", 6160, 188, 311, 34, player_spells, player_items)
 player3 = Person("Sid:", 4089, 174, 288, 34, player_spells, player_items)
 
 enemy1 = Person("Imp  ", 1250, 130, 560, 325, enemy_spells, [])
-enemy2 = Person("Magus", 18200, 701, 525, 25, enemy_spells, [])
+enemy2 = Person("ArchMagus", 18200, 701, 525, 25, enemy_spells, [])
 enemy3 = Person("Imp  ", 1250, 130, 560, 325, enemy_spells, [])
 
 
@@ -147,10 +147,10 @@ while running:
                     del enemies[enemy]
     
     enemy_choice = 1
-    target = random.randrange(0, 2)
-    enemy_dmg = enemy.generate_damage()
+    target = random.randrange(0, 3)
+    enemy_dmg = enemies[0].generate_damage()
 
-    players.[target].take_damage(enemy_dmg)
+    players[target].take_damage(enemy_dmg)
     print("Enemy attacks for", enemy_dmg)
 
     
