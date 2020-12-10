@@ -147,16 +147,12 @@ while running:
                     del enemies[enemy]
     
     enemy_choice = 1
-
+    target = random.randrange(0, 2)
     enemy_dmg = enemy.generate_damage()
-    player.take_damage(enemy_dmg)
+
+    players.[target].take_damage(enemy_dmg)
     print("Enemy attacks for", enemy_dmg)
 
-    print("--------------------------")
-    print("Enemy HP:", bcolors.FAIL + str(enemy.get_hp()) + "/" + str(enemy.get_max_hp()) + bcolors.ENDC)
-
-    print("Your HP:", bcolors.OKGREEN + str(player.get_hp()) + "/" + str(player.get_max_hp()) + bcolors.ENDC)
-    print("Your MP:", bcolors.OKBLUE + str(player.get_mp()) + "/" + str(player.get_max_mp()) + bcolors.ENDC + "\n")
     
     if enemy.get_hp() == 0:
         print(bcolors.OKGREEN + "You win!" + bcolors.ENDC)
