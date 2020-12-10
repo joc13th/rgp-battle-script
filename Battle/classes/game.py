@@ -79,7 +79,6 @@ class Person:
 
     def choose_target(self, enemies):
         i = 1
-
         print("\n" + bcolors.FAIL + bcolors.BOLD + "    TARGET:" + bcolors.ENDC)
         for enemy in enemies:
             if enemy.get_hp() != 0:

@@ -140,11 +140,13 @@ while running:
             elif item.type == "attack":
                 enemy = player.choose_target(enemies)
                 enemies[enemy].take_damage(item.prop)
+
                 print(bcolors.FAIL + "\n" + item.name + " deals", str(item.prop), "points of damage to " + enemies[enemy].name + bcolors.ENDC)
 
                 if enemies[enemy].get_hp() == 0:
                     print(enemies[enemy].name.replace(" ", "") + " has died.")
                     del enemies[enemy]
+
     
     enemy_choice = 1
     target = random.randrange(0, 3)
@@ -153,12 +155,18 @@ while running:
     players[target].take_damage(enemy_dmg)
     print("Enemy attacks for", enemy_dmg)
 
+    # Check if battle is over
+    defeated_enemies = 0
+    defeated_players = 0
+
+    for enemy in enemies:
+        if enemy.get_hp() == 0:
+            defeated_enemies += 1
+
+    for player in players:
+        if player.get_hp() == 0:
+            defeated_players += 1
     
-    if enemy.get_hp() == 0:
-        print(bcolors.OKGREEN + "You win!" + bcolors.ENDC)
-        running = False
-    elif player.get_hp() == 0:
-        print(bcolors.FAIL + "Enemy has defeated you!" + bcolors.ENDC)
-        running = False
+
 
     
